@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title><!--influencer.name--></title>
+  <script src="https://use.fontawesome.com/4d03072e1c.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://use.fontawesome.com/03309837df.js"></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="infupro.css">
+</head>
+<body>
+  <nav class="navbar navbar-light fixed-top" style="background-color: black;">
+    <span class="navbar-brand mb-0 h1"><span class="hob">hob</span><span class="nob">nob</span></span>
+    <span id="hi_msg"><i class="fa fa-user icons_top" aria-hidden="true"></i>Hi, <!--brand.company_name--> 
+      <button type="button" onclick="window.location.href='/brand/brand_logout/'" id="logout_button" style="background-color:transparent; border:none; padding:none">
+        <i class="fa fa-power-off icons_top" aria-hidden="true"></i>
+      </button>
+    </span>
+  </nav>
+<div class="area">
+    <div class="sidebar">
+        <ul>
+          <a href=""><li class="sidenav_links" id="first_sidenav_link"><i class="fa fa-user sidenav_icons" aria-hidden="true"></i> Profile</li></a>
+          <a href="/brand/brand_campaignform1/"><li class="sidenav_links"><i class="fa fa-plus sidenav_icons" aria-hidden="true"></i> New Campaigns</li></a>
+          <a href="/brand/ongoing_campaigns/"><li class="sidenav_links"><i class="fa fa-thumbs-up sidenav_icons" aria-hidden="true"></i> Active Campaigns</li></a>
+          <a href="/brand/completed_campaigns/"><li class="sidenav_links"><i class="fa fa-check sidenav_icons" aria-hidden="true"></i> Completed Campaigns</li></a>
+        </ul>
+      </div>
+    </div>
+<!-- partial:index.partial.html -->
+
+
+<!-- <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-2">
+      <img src="a.png" width="200" alt="Profile Image">
+    </div>
+    
+  </div>
+  <div class="row justify-content-center">
+    
+    <div class="col-md-4">
+      <h1>NITIKA PANJWANI</h1>
+      <p class="text-center"><a href="#">@ <span id="uniq"></span></a></p>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-3 text-center brmd">
+     <h1>101K</h1>
+     <p>Followers</p>
+    </div>
+    <div class="col-3 text-center brmd">
+      <h1>Delhi</h1>
+      <p>Location</p>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-3 text-center brmd">
+     <h1>8.4K</h1>
+     <p>Avg Views</p>
+    </div>
+    <div class="col-3 text-center brmd">
+      <h1><span id="like"></span></h1>
+      <p>Like Count</p>
+    </div>
+    <div class="col-3 text-center brmd">
+      <h1><span id="comment"></span></h1>
+      <p>Comment Count</p>
+    </div>
+  </div>
+
+</div> -->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <p>Followers this month</p>
+      <canvas id="myChart" width="300" height="300"></canvas>
+    </div>
+    <div class="col-md-6">
+      
+    </div>
+  </div>
+</div> -->
+<div class="container">
+  <div class="profile-header">
+    <div class="profile-img">
+      <img id="img-prof" src="" width="200" alt="Profile Image">
+    </div>
+    <div class="profile-nav-info">
+      <h3 class="user-name"><!--influencer.name--></h3>
+      <div class="address">
+        <i class="fa fa-map-marker"></i> &nbsp;
+        <p id="state" class="state"><!--influencer.location--></p>
+        <!-- comment --> <span id="country" class="country">India.</span> <!-- endcomment -->
+      </div>
+       <div class="col-md-12">
+        <div class="row">
+            
+            <!-- if influencer.sports -->
+            <button class="btn btn-dark">Sports</button> &nbsp;
+            <!-- endif -->
+            <!-- if influencer.technology -->
+            <button class="btn btn-dark">Technology</button> &nbsp;
+            <!-- endif -->
+            <!-- if influencer.travel -->
+            <button class="btn btn-dark">Travel</button> &nbsp;
+            <!-- endif -->
+        </div>
+      </div>
+    </div>
+    <div class="profile-option">
+      <div class="notification">
+        <i class="fa fa-bell"></i>
+        <span class="alert-message">3</span>
+      </div>
+    </div>
+  </div>
+  <div class="main-bd">
+    <div class="left-side">
+      <div class="profile-side">
+        <p class="mobile-no"><i class="fa fa-phone"></i> <!--influencer.contact_number--></p>
+        <p class="user-mail"><i class="fa fa-envelope"></i> <!--influencer.email--></p>
+        <div class="user-bio">
+          <h4>Profile Information</h4>
+          <!-- comment --> <p class="bio">
+            <p><strong>Short Bio :</strong> Lorem ipsum dolor sit amet, hello how consectetur adipimet!
+          </p> <!-- endcomment -->
+          <p class="bio">
+            <Strong>Gender : </strong>
+            <!-- if influencer.gender == "M" -->
+            Male
+            <!-- elif influencer.gender == "F" -->
+            Female
+            <!--else-->
+            Others
+            <!-- endif -->
+            
+          </p>
+          <p class="bio">
+            <Strong>Age : </strong><!--influencer.age-->
+          </p>
+          <p class="bio">
+            <Strong>Niche : </strong>
+            <!-- if influencer.arts -->
+            Arts,
+            <!-- endif -->
+            <!-- if influencer.automobile -->
+            Automobile,
+            <!-- endif -->
+            <!-- if influencer.beautyandmakeup -->
+            Beauty and Makeup,
+            <!-- endif -->
+            <!-- if influencer.businessandstartup -->
+            Business and Startup,
+            <!-- endif -->
+            <!-- if influencer.educationandcareer -->
+            Education and Career,
+            <!-- endif -->
+            <!-- if influencer.fashion -->
+            Fashion,
+            <!-- endif -->
+            <!-- if influencer.fitnessandhealth -->
+            Fitness and Health,
+            <!-- endif -->
+            <!-- if influencer.foodandbeverage -->
+            Food and Beverages,
+            <!-- endif -->
+            <!-- if influencer.lifestyle -->
+            Lifestyle,
+            <!-- endif -->
+            <!-- if influencer.marketingandsocialmedia -->
+            Marketing and Social Media,
+            <!-- endif -->
+            <!-- if influencer.movieandtv -->
+            Movies, TV and Entertainment,
+            <!-- endif -->
+            <!-- if influencer.musicanddance -->
+            Music and Dance,
+            <!-- endif -->
+            <!-- if influencer.photography -->
+            Photography and Videography,
+            <!-- endif -->
+            <!-- if influencer.societyandpolitics -->
+            Society and Politics,
+            <!-- endif -->
+            <!-- if influencer.sports -->
+            Sports,
+            <!-- endif -->
+            <!-- if influencer.technology -->
+            Technology,
+            <!-- endif -->
+            <!-- if influencer.travel -->
+            Travel,
+            <!-- endif -->
+            
+            
+
+          </p>
+          <!-- comment --> <p class="bio">
+            <Strong>No of Brands Worked With : </strong>12
+          </p>
+          <p class="bio">
+            <Strong>Worked With : </strong>Loreal,XYZ.
+          </p>
+          <p class="bio">
+            <Strong>Post TAT : </strong>2-3 Days
+          </p> <!-- endcomment -->
+        </div>
+        <div class="user-rating">
+          <h3 class="rating">4.5</h3>
+          <div class="rate">
+            <div class="star-outer">
+              <div class="star-inner">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+            <span class="no-of-user-rate"><span>123(CURRENTLY STATIC)</span>&nbsp;&nbsp;reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-side">
+
+      <div class="nav">
+        <ul>
+        <!-- if influencer.instagram_username -->
+          <li onclick="tabs(0)" class="user-post active">Instagram</li>
+        <!-- endif -->
+        <!-- if influencer.youtube_username -->
+          <li onclick="tabs(1)" class="user-review">Youtube</li>
+        <!-- endif -->
+        <!-- if influencer.fb_username -->
+          <li onclick="tabs(2)" class="user-setting">Facebook</li>
+        <!-- endif -->
+
+          
+        </ul>
+      </div>
+      <div class="profile-body">
+        <div class="profile-posts tab">
+          <div class="card">
+            <h1 class="pdtp">Statistics</h1>
+            <hr>
+            <div class="row justify-content-center">
+              <div class="col-3 text-center brmd">
+                <h1>101K</h1>
+                <p>Followers</p>
+               </div>
+               <div class="col-3 text-center brmd">
+                <h1>Delhi</h1>
+                <p>Location</p>
+              </div>
+            </div>
+          </div>
+
+<div class="card">
+  <div class="row justify-content-center">
+    <div class="col-3 text-center brmd">
+     <h1>8.4K</h1>
+     <p>Avg Views</p>
+    </div>
+    <div class="col-3 text-center brmd">
+      <h1><span id="like"></span></h1>
+      <p>Like Count</p>
+    </div>
+    <div class="col-3 text-center brmd">
+      <h1><span id="comment"></span></h1>
+      <p>Comment Count</p>
+    </div>
+  </div>
+</div>
+<br>
+<div class="card">
+  <h1 class="pdtp">influencer details</h1>
+          <hr>
+  <div class="row">
+    <div class="col-md-4">
+      <!-- <p>Followers this month</p> -->
+      <canvas id="myChart" width="300" height="300"></canvas>
+    </div>
+    <div class="col-md-4">
+      <!-- <p>Followers this month</p> -->
+      <canvas id="myChart1" width="300" height="300"></canvas>
+    </div>
+    <div class="col-md-4">
+      <!-- <p>Followers this month</p> -->
+      <canvas id="myChart2" width="300" height="300"></canvas>
+    </div>
+    
+  </div>
+</div>
+<div class="card">
+  <div class="row">
+
+    <div class="col-md-6">
+      <!-- <p>Followers this month</p> -->
+      <canvas id="myChart3" width="300" height="300"></canvas>
+    </div>
+  
+    <div class="col-md-6">
+      <!-- <p>Followers this month</p> -->
+      <canvas id="myChart4" width="300" height="300"></canvas>
+    </div>
+
+  </div>
+  
+  
+</div>
+<br>
+<div class="card">
+  <h1 class="pdtp">influencer details</h1>
+  <hr>
+  <div class="row">
+    <div class="col-md-4">
+      <span>influencer interests</span>
+      <hr>
+      <p id="iconmr"><Span ><i class="fa fa-bus"></i></Span><span style=" padding-left: 10px;">Travel, Tourism & Aviation</span> </p>
+      <p id="iconmr"><span><i class="fa fa-bus"></i></span><span style=" padding-left: 10px;">Beauty & Cosmatics</span> </p>
+      <p id="iconmr"><span><i class="fa fa-bolt"></i></span> <span style=" padding-left: 10px;">Electronics & Computers</span> </p>
+      <p id="iconmr"><span><i class="fa fa-camera"></i></span> <span style=" padding-left: 10px;">Camera & Photography</span> </p>
+      <p id="iconmr"><span><i class="fa fa-shopping-bag"></i></span> <span style=" padding-left: 10px;"> Shopping & Retail</span> </p>
+    </div>
+
+    <div class="col-md-4 ">
+      <span>Popular # and @</span>
+      <hr>
+      <p><span id="hashpop">@lorem ipsum</span> <span id="hashpop">#lorem ipsum</span></p><p><span id="hashpop">@lorem ipsum</span> <span id="hashpop">#lorem ipsum</span></p>
+      <p><span id="hashpop">@lorem ipsum</span> <span id="hashpop">#lorem ipsum</span></p><p><span id="hashpop">@lorem ipsum</span> <span id="hashpop">#lorem ipsum</span></p>
+    
+    </div>
+    
+    <div class="col-md-4">
+      <span>Lookalikes</span>
+      <hr>
+      <p><span><img src="images/img-1.jpg" id="imgpro" alt=""></span><span id="prnm"><a href="#">@lorem ipsum</a></span><br><span id="prnm2">lorem ipsum</span></p><br>
+      <p><span><img src="images/img-2.jpg" id="imgpro" alt=""></span><span id="prnm"><a href="#">@lorem ipsum</a></span><br><span id="prnm2">lorem ipsum</span></p><br>
+      <p><span><img src="images/img-1.jpg" id="imgpro" alt=""></span><span id="prnm"><a href="#">@lorem ipsum</a></span><br><span id="prnm2">lorem ipsum</span></p><br>
+    
+    </div>
+
+  </div>
+</div>
+<br>
+<div class="card">
+  <h1 class="pdtp">Audience details <span style="font-size: 13px;">by Followers</span></h1>
+  <hr>
+  <div class="row">
+    <div class="col-md-4">
+      <p><span id="emj"> &#128546;</span><span id="flw">45.03%</span></p>
+      <p>Followers Credibility</p>
+      
+    </div>
+
+    <div class="col-md-4">
+      <p><span id="flw">10.21%</span></p>
+      <p>Notable Followers</p>
+      
+    </div>
+    
+    <div class="col-md-4">
+      <span>Lookalikes</span>
+      <hr>
+      <p><span><img src="images/img-1.jpg" id="imgpro" alt=""></span><span id="prnm"><a href="#">@lorem ipsum</a></span><br><span id="prnm2">lorem ipsum</span></p><br>
+      <p><span><img src="images/img-2.jpg" id="imgpro" alt=""></span><span id="prnm"><a href="#">@lorem ipsum</a></span><br><span id="prnm2">lorem ipsum</span></p><br>
+      <p><span><img src="images/img-1.jpg" id="imgpro" alt=""></span><span id="prnm"><a href="#">@lorem ipsum</a></span><br><span id="prnm2">lorem ipsum</span></p><br>
+    
+    </div>
+
+  </div>
+</div>
+<div class="card">
+<div class="row">
+  <div class="col-md-4">
+    <span>influencer Brand Affinity</span>
+    <hr>
+    <p><span><img src="images/Airbnb.png" id="logpro" alt=""></span><span id="prnm"><a href="#">Airbnb</a></span></p><br>
+    <p><span><img src="images/Instagram.png" id="logpro" alt=""></span><span id="prnm"><a href="#">Instagram</a></span></p><br>
+    <p><span><img src="images/amazon.png" id="logpro" alt=""></span><span id="prnm"><a href="#">Amazon</a></span></p>
+  
+  </div>
+
+  <div class="col-md-4">
+    <span>Topic Tensor</span>
+    <hr>
+    <br>
+    <p>accorhotels</p>
+  
+  </div>
+
+</div>
+
+</div>
+<div class="card">
+  <div class="col-md-6"> 
+    <canvas id="myChart5" width="300" height="300"></canvas>
+  </div>
+</div>
+          <div class="card">
+            <!-- if influencer.instagram_username -->
+              <h1>Statistics</h1>
+              <hr>
+             
+              
+
+              <div class="row">
+                <div class="row">
+                  <div class="al">
+                    <p>Followers</p>
+                    <h4>101K</h4>
+                  </div>
+                  <div class="al">
+                    <p>Location</p>
+                    <h4>Delhi</h4>
+                  </div>
+                  <div class="al">
+                    <p>Avg Views</p>
+                    <h4>8.4K</h4>
+                  </div>
+                  <div class="al">
+                    <p>Avg Comments(?)</p>
+                    <h4>20.2K</h4>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="alm">
+                    <p>Activities</p>
+                    <h4>0</h4>
+                  </div>
+                  <div class="alm">
+                    <p>Recent Post</p>
+                    <h4>12-02-21</h4>
+                  </div>
+                  <div class="alm">
+                    <p>Grade</p>
+                    <h4>A</h4>
+                  </div>
+                  <div class="alx">
+                    <p>Number of Posts</p>
+                    <h4>1K</h4>
+                  </div>
+                </div>
+              </div>
+            <!-- endif -->
+          </div>
+          <br>
+          <div class="card">
+            <h1>Brand Collaborations</h1>
+            <hr>
+           
+          </div>
+        </div>
+        <div class="profile-reviews tab">
+          <div class="card">
+            <h1>Statistics</h1>
+            <hr>
+            <div class="row">
+              <div class="row">
+                <div class="al">
+                  <p>Subscribers</p>
+                  <h4>68.2K</h4>
+                </div>
+                <div class="al">
+                  <p>Engg Rate(?)</p>
+                  <h4>65%</h4>
+                </div>
+                <div class="al">
+                  <p>Avg Likes(?)</p>
+                  <h4>28.2K</h4>
+                </div>
+                <div class="al">
+                  <p>Avg Comments(?)</p>
+                  <h4>20.2K</h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="alm">
+                  <p>Activities</p>
+                  <h4>0</h4>
+                </div>
+                <div class="al">
+                  <p>Recent Upload</p>
+                  <h4>12-02-21</h4>
+                </div>
+                <div class="alm">
+                  <p>Play Button</p>
+                  <h4>Golden</h4>
+                </div>
+                <div class="al">
+                  <p>Number of Videos</p>
+                  <h4>132</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        <br>
+        <div class="card">
+          <h1>Brand Collaborations</h1>
+          <hr>
+          <div class="container">
+		  <div class="row">
+		  <div class="col-md-6">
+		   <canvas id="chart"></canvas>
+		  </div>
+		  <div class="col-md-6">
+		   <canvas id="chart"></canvas>
+		  </div>
+		  </div>
+		 
+		  </div>
+		  
+        </div>
+      </div>
+        <div class="profile-settings tab">
+          <div class="card">
+            <h1>Statistics</h1>
+            <hr>
+            <div class="row">
+              <div class="row">
+                <div class="al">
+                  <p>Followers</p>
+                  <h4>68.2K</h4>
+                </div>
+                <div class="al">
+                  <p>Engg Rate(?)</p>
+                  <h4>65%</h4>
+                </div>
+                <div class="al">
+                  <p>Avg Likes(?)</p>
+                  <h4>28.2K</h4>
+                </div>
+                <div class="al">
+                  <p>Avg Comments(?)</p>
+                  <h4>20.2K</h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="alm">
+                  <p>Activities</p>
+                  <h4>0</h4>
+                </div>
+                <div class="alm">
+                  <p>Recent Post</p>
+                  <h4>12-02-21</h4>
+                </div>
+                <div class="alm">
+                  <p>Grade</p>
+                  <h4>A</h4>
+                </div>
+                <div class="alx">
+                  <p>Number of Posts</p>
+                  <h4>1K</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="card">
+            <h1>Brand Collaborations</h1>
+            <hr>
+            <div id="container"><div style="position: relative; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%;"><svg xmlns="http://www.w3.org/2000/svg" border="0" data-ac-wrapper-id="3" width="100%" height="100%" class="anychart-ui-support" ac-id="ac_stage_0" role="presentation" style="display: block;"><defs></defs><g data-ac-wrapper-id="4" id="ac_layer_1"><g data-ac-wrapper-id="5" role="article" aria-label="tag-cloud chart " id="ac_chart_2"><g data-ac-wrapper-id="6" id="ac_layer_4"><path data-ac-wrapper-id="7" id="ac_path_3" fill="#ffffff" stroke="none" d="M 0 0 L 419 0 419 0 419 150 419 150 0 150 0 150 0 0 0 0 Z"></path></g><g data-ac-wrapper-id="8" transform="matrix(3.0155038759689923,0,0,3.0155038759689923,204,72)" id="ac_layer_f"><g data-ac-wrapper-id="9" id="ac_layer_9"><text data-ac-wrapper-id="10" fill="#fff" opacity="0.000001" text-anchor="middle" font-family="Verdana, Helvetica, Arial, sans-serif" font-style="normal" font-variant="normal" font-weight="normal" font-size="13" transform="translate(0,0)rotate(0)" id="ac_simple-text_5" style="cursor: default;">realme 6 phone</text><text data-ac-wrapper-id="11" fill="#fff" opacity="0.000001" text-anchor="middle" font-family="Verdana, Helvetica, Arial, sans-serif" font-style="normal" font-variant="normal" font-weight="normal" font-size="10" transform="translate(18,12)rotate(0)" id="ac_simple-text_6" style="cursor: default;"> cambly</text><text data-ac-wrapper-id="12" fill="#fff" opacity="0.000001" text-anchor="middle" font-family="Verdana, Helvetica, Arial, sans-serif" font-style="normal" font-variant="normal" font-weight="normal" font-size="7" transform="translate(-32,10)rotate(0)" id="ac_simple-text_7" style="cursor: default;"> mama earth</text><text data-ac-wrapper-id="13" fill="#fff" opacity="0.000001" text-anchor="middle" font-family="Verdana, Helvetica, Arial, sans-serif" font-style="normal" font-variant="normal" font-weight="normal" font-size="4" transform="translate(-24,-14)rotate(0)" id="ac_simple-text_8" style="cursor: default;"> wow beauty skin science</text></g><g data-ac-wrapper-id="14" id="ac_layer_e"><text data-ac-wrapper-id="15" text-anchor="middle" fill="#333" fill-opacity="0.85" font-family="Verdana, Helvetica, Arial, sans-serif" font-style="normal" font-variant="normal" font-weight="normal" font-size="13" transform="translate(0,0)rotate(0)" pointer-events="none" id="ac_simple-text_a" style="cursor: default;">realme 6 phone</text><text data-ac-wrapper-id="16" text-anchor="middle" fill="#ded614" fill-opacity="0.85" font-family="Verdana, Helvetica, Arial, sans-serif" font-style="normal" font-variant="normal" font-weight="normal" font-size="10" transform="translate(18,12)rotate(0)" pointer-events="none" id="ac_simple-text_b" style="cursor: default;"> cambly</text><text data-ac-wrapper-id="17" text-anchor="middle" fill="#43a165" fill-opacity="0.85" font-family="Verdana, Helvetica, Arial, sans-serif" font-style="normal" font-variant="normal" font-weight="normal" font-size="7" transform="translate(-32,10)rotate(0)" pointer-events="none" id="ac_simple-text_c" style="cursor: default;"> mama earth</text><text data-ac-wrapper-id="18" text-anchor="middle" fill="#e82414" fill-opacity="0.85" font-family="Verdana, Helvetica, Arial, sans-serif" font-style="normal" font-variant="normal" font-weight="normal" font-size="4" transform="translate(-24,-14)rotate(0)" pointer-events="none" id="ac_simple-text_d" style="cursor: default;"> wow beauty skin science</text></g></g></g></g></svg><div class="anychart-credits"><a href="" title="" target="_blank"><span class="anychart-credits-text"></span></a></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'>
+  </script><script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+  <script src="infupro.js"></script>
+<script src="data.js"></script>
+<script src="chart.js"></script>
+  
+  
+</body>
+</html>
