@@ -1,5 +1,5 @@
 
-const mydata_url = "http://127.0.0.1:5500/data.json";
+const mydata_url = "http://127.0.0.1:5501/data.json";
 async function getData() {
     const response = await fetch(mydata_url);
     const {data} = await response.json();
